@@ -1,8 +1,33 @@
+# Data
+
+/www/uploads/**/*-*x*.png
+/www/uploads/**/*-*x*.jpg
+
+
+# Build
+
+/wp-core
+
+# Wordpress
+
+/www/index.php
+/www/wp-activate.php
 /www/wp-admin
-/www/*.php
-!/www/wp-config.php
+/www/wp-blog-header.php
+/www/wp-comments-post.php
+/www/wp-content/languages/*.mo
+/www/wp-content/languages/*.po
+/www/wp-content/languages/plugins/*.mo
+/www/wp-content/languages/plugins/*.po
+/www/wp-content/plugins/*/
+/www/wp-content/themes/*/
+/www/wp-cron.php
 /www/wp-includes
-/www/wp-content/plugins/*/*
-/www/wp-content/languages/*
-!*de_DE*.mo
-!*de_DE*.po
+/www/wp-links-opml.php
+/www/wp-load.php
+/www/wp-login.php
+/www/wp-mail.php
+/www/wp-settings.php
+/www/wp-signup.php
+/www/wp-trackback.php
+/www/xmlrpc.php
