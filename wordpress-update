@@ -1,0 +1,18 @@
+#!/bin/sh
+
+SCRIPT_DIR="$(cd "$(dirname "${0}")"; pwd)"
+
+TMP_DIR=/tmp
+
+curl --progress-bar --location 'https://de.wordpress.org/latest-de_DE.zip' | ditto -xk - "${TMP_DIR}"
+
+rsync --archive --update  --progress "${TMP_DIR}/wordpress/" "${SCRIPT_DIR}/public_html/" \
+  --exclude '/license.txt' \
+  --exclude '/liesmich.html' \
+  --exclude '/readme.html' \
+  --exclude '/wp-config-sample.php' \
+  --exclude '/wp-content/plugins/hello.php' \
+  --exclude '/wp-content/plugins/akismet' \
+  --exclude '/wp-content/languages/plugins/akismet*' \
+  --exclude '/wp-content/themes/twenty*' \
+  --exclude '/wp-content/languages/themes/twenty*'

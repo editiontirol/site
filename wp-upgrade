@@ -1,0 +1,86 @@
+#!/bin/sh
+
+CACHE=/tmp
+
+
+WP_VERSION='4.4.1'
+WP_LANGUAGES=(de_DE de_DE_formal)
+WP_PATH="$(cd ${0%/*}; pwd)/wp-core"
+
+WP_VERSION_MAJOR_MINOR=${WP_VERSION%%.*}.$(minor=${WP_VERSION#*.} && echo ${minor%%.*})
+
+download_and_check() {
+
+  url="${1}"
+  name="${url##*/}"
+  path="$CACHE/$name"
+  sha256=${2}
+
+  if [ ! -f "$path" ]; then
+    echo "Downloading ${name}"
+    curl --progress-bar --location "$url" -o "$path"
+  else
+    echo "Already downloaded: $path"
+  fi
+
+  echo "Extracting $name"
+  unzip -q -o "$path" -d "$CACHE"
+
+}
+
+rm -rf "$CACHE/wordpress"
+
+# WordPress Core
+
+for WP_LANGUAGE in ${WP_LANGUAGES[*]}; do
+  download_and_check "https://de.wordpress.org/wordpress-$WP_VERSION-$WP_LANGUAGE.zip"
+done
+
+
+# Plugins
+
+for plugin in \
+  mailgun@1.4.1 \
+  redirection@2.4.3 \
+  woocommerce@2.4.12 \
+  language-fallback@1.0.3 \
+  wp-optimize@1.8.9.10 \
+  regenerate-thumbnails@2.2.6
+do
+  version=${plugin##*@}
+  plugin=${plugin%@*}
+
+  download_and_check "https://downloads.wordpress.org/plugin/$plugin.$version.zip"
+
+
+  for WP_LANGUAGE in ${WP_LANGUAGES[*]}; do
+    url="https://i18n.trac.wordpress.org/export/latest/plugins/$plugin/$version/$WP_LANGUAGE/$plugin-$WP_LANGUAGE.po"
+
+    if curl --silent "$url" --head --fail --output /dev/null; then
+      echo "Downloading '$WP_LANGUAGE' translation for $plugin"
+
+      curl --progress-bar --location "$url" -o "$CACHE/wordpress/wp-content/languages/plugins/${url##*/}"
+    fi
+  done
+
+  rsync --archive "$CACHE/$plugin/" "$CACHE/wordpress/wp-content/plugins/$plugin" \
+    --exclude '/license.txt' \
+    --exclude '/readme.txt'
+
+done
+
+
+
+# Move to WP_PATH
+
+rsync --delete --delete-excluded --archive "$CACHE/wordpress/" "$WP_PATH" \
+  --exclude '/license.txt' \
+  --exclude '/liesmich.html' \
+  --exclude '/readme.html' \
+  --exclude '/wp-config-sample.php' \
+  --exclude '/wp-content/plugins/hello.php' \
+  --exclude '/wp-content/plugins/akismet' \
+  --exclude '/wp-content/languages/plugins/akismet*' \
+  --exclude '/wp-content/themes/twenty*' \
+  --exclude '/wp-content/languages/themes/twenty*' \
+  --exclude '/wp-content/plugins/wp-optimize/index.htm'
