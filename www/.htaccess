@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  RewriteBase /
+
+  # Rewrite all URLs to “edition.tirol”.
+  RewriteCond %{HTTPS} off [ornext]
+  RewriteCond %{HTTP_HOST} !^(edition\.tirol) [nocase]
+  RewriteRule (.*) https://edition.tirol/$1 [redirect=301,last]
+
+  # Block WordPress include-only files.
+  RewriteRule ^wp-(admin/includes/|includes/(([^/]+|js/tinymce/langs/.+)\.php|theme-compat/)) - [forbidden]
+
+  # Rewrite all URLs via WordPress.
+  RewriteRule ^index\.php$ - [last]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.php [last]
+
+</IfModule>
+
+<files wp-config.php>
+  order allow,deny
+  deny from all
+</files>
