@@ -1,0 +1,8 @@
+/www/wp-admin
+/www/*.php
+!/www/wp-config.php
+/www/wp-includes
+/www/wp-content/plugins/*/*
+/www/wp-content/languages/*
+!*de_DE*.mo
+!*de_DE*.po

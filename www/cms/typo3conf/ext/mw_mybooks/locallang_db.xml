@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'mw_mybooks'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_mwmybooks_books">Book</label>
+			<label index="tx_mwmybooks_books.title">Title</label>
+			<label index="tx_mwmybooks_books.author">Author</label>
+			<label index="tx_mwmybooks_books.isbn">ISBN</label>
+			<label index="tx_mwmybooks_books.price">Price</label>
+			<label index="tx_mwmybooks_books.shortdescription">Short Description</label>
+			<label index="tx_mwmybooks_books.description">Description</label>
+			<label index="tx_mwmybooks_books.cover">Book Cover</label>
+			<label index="tx_mwmybooks_books.link">Additional Information</label>
+			<label index="tx_mwmybooks_books.category">Book Category</label>
+			<label index="tx_mwmybooks_books.martinreiter">Book by Martin Reiter?</label>
+			<label index="tx_mwmybooks_books.available">Still available?</label>
+			<label index="tx_mwmybooks_category">Book Category</label>
+			<label index="tx_mwmybooks_category.name">Category Name</label>
+			<label index="tx_mwmybooks_category.description">Description</label>
+			<label index="tt_content.tx_mwmybooks_category">Book Category</label>
+			<label index="tt_content.tx_mwmybooks_martinreiter">filter ONLY Books by Martin Reiter?</label>
+			<label index="tt_content.list_type_pi1">Booklist</label>
+			<label index="tt_content.list_type_pi2">Random Books</label>
+			<label index="tt_content.list_type_pi3">Category List</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_mwmybooks_books">Buch</label>
+			<label index="tx_mwmybooks_books.title">Titel</label>
+			<label index="tx_mwmybooks_books.author">Autor</label>
+			<label index="tx_mwmybooks_books.isbn">ISBN</label>
+			<label index="tx_mwmybooks_books.price">Preis</label>
+			<label index="tx_mwmybooks_books.shortdescription">Kurzbeschreibung</label>
+			<label index="tx_mwmybooks_books.description">Beschreibung</label>
+			<label index="tx_mwmybooks_books.cover">Bild</label>
+			<label index="tx_mwmybooks_books.link">Zusätzliche Informationen</label>
+			<label index="tx_mwmybooks_books.category">Buchkategorie</label>
+			<label index="tx_mwmybooks_books.martinreiter">Buch von Martin Reiter?</label>
+			<label index="tx_mwmybooks_books.available">Buch noch verfügbar?</label>
+			<label index="tx_mwmybooks_category">Buchkategorie</label>
+			<label index="tx_mwmybooks_category.name">Kategoriename</label>
+			<label index="tx_mwmybooks_category.description">Beschreibung</label>
+			<label index="tt_content.tx_mwmybooks_category">Buchkategorie</label>
+			<label index="tt_content.tx_mwmybooks_martinreiter">NUR Bücher von Martin Reiter herausfiltern?</label>
+			<label index="tt_content.list_type_pi1">Buchliste</label>
+			<label index="tt_content.list_type_pi2">Zufällige Buchanzeige</label>
+			<label index="tt_content.list_type_pi3">Kategorieliste</label>
+		</languageKey>
+	</data>
+</T3locallang>

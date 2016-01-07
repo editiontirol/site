@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallangExt>
+	<data type="array">
+		<languageKey index="de" type="array">
+			<label index=".alttitle">TYPO3 Glossar</label>
+			<label index=".description">Ein Glossar von Begriffen rund um TYPO3.</label>
+			<label index="acl.alttitle">ACL</label>
+			<label index="apache.alttitle">Apache</label>
+			<label index="api.alttitle">API</label>
+			<label index="be.alttitle">BE</label>
+			<label index="cascading_style_sheets.alttitle">Cascading Style Sheets</label>
+			<label index="coa.alttitle">COA</label>
+			<label index="content_default.alttitle">content (default)</label>
+			<label index="content_management_framework.alttitle">Content Management Framework</label>
+			<label index="content_management_system.alttitle">Content Management System</label>
+			<label index="csh.alttitle">CSH</label>
+			<label index="css.alttitle">CSS</label>
+			<label index="debug.alttitle">debug()</label>
+			<label index="em.alttitle">EM</label>
+			<label index="enablefields.alttitle">enableFields</label>
+			<label index="ext_localconfphp.alttitle">ext_localconf.php</label>
+			<label index="ext_tablesphp.alttitle">ext_tables.php</label>
+			<label index="faq.alttitle">FAQ</label>
+			<label index="fe.alttitle">FE</label>
+			<label index="flexform.alttitle">flexform</label>
+			<label index="freetype.alttitle">FreeType</label>
+			<label index="gifbuilder.alttitle">GIFBUILDER</label>
+			<label index="gifbuilderobj.alttitle">GIFBUILDERobj</label>
+			<label index="gnu.alttitle">GNU</label>
+			<label index="gnu_gpl.alttitle">GNU GPL</label>
+			<label index="gpl.alttitle">GPL</label>
+			<label index="hmenu.alttitle">HMENU</label>
+			<label index="hook.alttitle">Hook</label>
+			<label index="html.alttitle">HTML</label>
+			<label index="id.alttitle">id</label>
+			<label index="imgresource.alttitle">imgResource</label>
+			<label index="jumpurl.alttitle">jumpUrl</label>
+			<label index="kickstarter.alttitle">kickstarter</label>
+			<label index="lamp.alttitle">LAMP</label>
+			<label index="local_lang.alttitle">local_lang</label>
+			<label index="localconf.alttitle">localconf</label>
+			<label index="locallang.alttitle">locallang</label>
+			<label index="mysql.alttitle">MySQL</label>
+			<label index="nicetext.alttitle">niceText</label>
+			<label index="no_cache.alttitle">no_cache</label>
+			<label index="optionsplit.alttitle">optionSplit</label>
+			<label index="parsefunc.alttitle">parseFunc</label>
+			<label index="pid.alttitle">pid</label>
+			<label index="rdct.alttitle">RDCT</label>
+			<label index="rte.alttitle">RTE</label>
+			<label index="simulatestaticdocuments.alttitle">simulateStaticDocuments</label>
+			<label index="stdwrap.alttitle">stdWrap</label>
+			<label index="stylescontent.alttitle">styles.content</label>
+			<label index="stylescontent_default.alttitle">styles.content (default)</label>
+			<label index="stylescontentget.alttitle">styles.content.get</label>
+			<label index="sysfolder.alttitle">SysFolder</label>
+			<label index="t3lib.alttitle">t3lib</label>
+			<label index="t3lib_div.alttitle">t3lib_div</label>
+			<label index="tca.alttitle">TCA</label>
+			<label index="tce.alttitle">TCE</label>
+			<label index="templavoila.alttitle">TemplaVoila</label>
+			<label index="ter.alttitle">TER</label>
+			<label index="tlo.alttitle">TLO</label>
+			<label index="toc.alttitle">TOC</label>
+			<label index="ts.alttitle">TS</label>
+			<label index="tsconfig.alttitle">TSconfig</label>
+			<label index="tsfe.alttitle">TSFE</label>
+			<label index="tsref.alttitle">TSref</label>
+			<label index="tt_content.alttitle">tt_content</label>
+			<label index="typo3_conf_vars.alttitle">TYPO3_CONF_VARS</label>
+			<label index="typoscript.alttitle">Typoscript</label>
+			<label index="uid.alttitle">UID</label>
+			<label index="user.alttitle">USER</label>
+			<label index="user_int.alttitle">USER_INT</label>
+			<label index="userfunc.alttitle">userFunc</label>
+			<label index="wamp.alttitle">WAMP</label>
+			<label index="wcms.alttitle">WCMS</label>
+			<label index="x-html.alttitle">X-HTML</label>
+			<label index="xhtml.alttitle">XHTML</label>
+			<label index="xml.alttitle">XML</label>
+			<label index="xslt.alttitle">XSLT</label>
+		</languageKey>
+	</data>
+	<orig_hash type="array">
+		<languageKey index="de" type="array">
+			<label index="acl.alttitle" type="integer">96388445</label>
+			<label index="apache.alttitle" type="integer">244781998</label>
+			<label index="api.alttitle" type="integer">230257699</label>
+			<label index="be.alttitle" type="integer">222154562</label>
+			<label index="cascading_style_sheets.alttitle" type="integer">123921933</label>
+			<label index="coa.alttitle" type="integer">97688605</label>
+			<label index="content_default.alttitle" type="integer">247310995</label>
+			<label index="content_management_framework.alttitle" type="integer">147557494</label>
+			<label index="content_management_system.alttitle" type="integer">111689700</label>
+			<label index="csh.alttitle" type="integer">29067018</label>
+			<label index="css.alttitle" type="integer">46492726</label>
+			<label index="debug.alttitle" type="integer">134236600</label>
+			<label index="em.alttitle" type="integer">194364373</label>
+			<label index="enablefields.alttitle" type="integer">108298630</label>
+			<label index="ext_localconfphp.alttitle" type="integer">105953936</label>
+			<label index="ext_tablesphp.alttitle" type="integer">126548459</label>
+			<label index="faq.alttitle" type="integer">33460603</label>
+			<label index="fe.alttitle" type="integer">105996134</label>
+			<label index="flexform.alttitle" type="integer">61799561</label>
+			<label index="freetype.alttitle" type="integer">57110911</label>
+			<label index="gifbuilder.alttitle" type="integer">212651724</label>
+			<label index="gifbuilderobj.alttitle" type="integer">246808846</label>
+			<label index="gnu.alttitle" type="integer">192842197</label>
+			<label index="gnu_gpl.alttitle" type="integer">77019205</label>
+			<label index="gpl.alttitle" type="integer">175480937</label>
+			<label index="hmenu.alttitle" type="integer">163028819</label>
+			<label index="hook.alttitle" type="integer">194721556</label>
+			<label index="html.alttitle" type="integer">79998303</label>
+			<label index="id.alttitle" type="integer">192985975</label>
+			<label index="imgresource.alttitle" type="integer">155967478</label>
+			<label index="jumpurl.alttitle" type="integer">89167768</label>
+			<label index="kickstarter.alttitle" type="integer">142535161</label>
+			<label index="lamp.alttitle" type="integer">152438302</label>
+			<label index="local_lang.alttitle" type="integer">20499284</label>
+			<label index="localconf.alttitle" type="integer">248815508</label>
+			<label index="locallang.alttitle" type="integer">255642085</label>
+			<label index="mysql.alttitle" type="integer">103415883</label>
+			<label index="nicetext.alttitle" type="integer">138425940</label>
+			<label index="no_cache.alttitle" type="integer">176075605</label>
+			<label index="optionsplit.alttitle" type="integer">117136568</label>
+			<label index="parsefunc.alttitle" type="integer">66389516</label>
+			<label index="pid.alttitle" type="double">14365193</label>
+			<label index="rdct.alttitle" type="integer">21679436</label>
+			<label index="rte.alttitle" type="double">14619518</label>
+			<label index="simulatestaticdocuments.alttitle" type="integer">34344380</label>
+			<label index="stdwrap.alttitle" type="integer">84491613</label>
+			<label index="stylescontent.alttitle" type="integer">191117678</label>
+			<label index="stylescontent_default.alttitle" type="integer">92745474</label>
+			<label index="stylescontentget.alttitle" type="integer">131141043</label>
+			<label index="sysfolder.alttitle" type="integer">260649090</label>
+			<label index="t3lib.alttitle" type="integer">81016601</label>
+			<label index="t3lib_div.alttitle" type="integer">63533722</label>
+			<label index="tca.alttitle" type="integer">255358179</label>
+			<label index="tce.alttitle" type="integer">177410185</label>
+			<label index="templavoila.alttitle" type="integer">255775515</label>
+			<label index="ter.alttitle" type="integer">108625632</label>
+			<label index="tlo.alttitle" type="integer">44551184</label>
+			<label index="toc.alttitle" type="integer">110707206</label>
+			<label index="ts.alttitle" type="integer">112888235</label>
+			<label index="tsconfig.alttitle" type="integer">258585102</label>
+			<label index="tsfe.alttitle" type="double">4070253</label>
+			<label index="tsref.alttitle" type="integer">77846195</label>
+			<label index="tt_content.alttitle" type="integer">48685696</label>
+			<label index="typo3_conf_vars.alttitle" type="integer">188724046</label>
+			<label index="typoscript.alttitle" type="integer">95234571</label>
+			<label index="uid.alttitle" type="integer">243081769</label>
+			<label index="user.alttitle" type="integer">48499416</label>
+			<label index="user_int.alttitle" type="integer">111390634</label>
+			<label index="userfunc.alttitle" type="integer">224024813</label>
+			<label index="wamp.alttitle" type="integer">28377547</label>
+			<label index="wcms.alttitle" type="integer">228878352</label>
+			<label index="x-html.alttitle" type="integer">55800520</label>
+			<label index="xhtml.alttitle" type="integer">38150844</label>
+			<label index="xml.alttitle" type="integer">55581616</label>
+			<label index="xslt.alttitle" type="integer">20570771</label>
+			<label index=".alttitle" type="integer">195120045</label>
+			<label index=".description" type="integer">107259856</label>
+		</languageKey>
+	</orig_hash>
+	<orig_text type="array">
+		<languageKey index="de" type="array">
+			<label index="acl.alttitle">ACL</label>
+			<label index="apache.alttitle">Apache</label>
+			<label index="api.alttitle">API</label>
+			<label index="be.alttitle">BE</label>
+			<label index="cascading_style_sheets.alttitle">Cascading Style Sheets</label>
+			<label index="coa.alttitle">COA</label>
+			<label index="content_default.alttitle">content (default)</label>
+			<label index="content_management_framework.alttitle">Content Management Framework</label>
+			<label index="content_management_system.alttitle">Content Management System</label>
+			<label index="csh.alttitle">CSH</label>
+			<label index="css.alttitle">CSS</label>
+			<label index="debug.alttitle">debug()</label>
+			<label index="em.alttitle">EM</label>
+			<label index="enablefields.alttitle">enableFields</label>
+			<label index="ext_localconfphp.alttitle">ext_localconf.php</label>
+			<label index="ext_tablesphp.alttitle">ext_tables.php</label>
+			<label index="faq.alttitle">FAQ</label>
+			<label index="fe.alttitle">FE</label>
+			<label index="flexform.alttitle">flexform</label>
+			<label index="freetype.alttitle">FreeType</label>
+			<label index="gifbuilder.alttitle">GIFBUILDER</label>
+			<label index="gifbuilderobj.alttitle">GIFBUILDERobj</label>
+			<label index="gnu.alttitle">GNU</label>
+			<label index="gnu_gpl.alttitle">GNU GPL</label>
+			<label index="gpl.alttitle">GPL</label>
+			<label index="hmenu.alttitle">HMENU</label>
+			<label index="hook.alttitle">Hook</label>
+			<label index="html.alttitle">HTML</label>
+			<label index="id.alttitle">id</label>
+			<label index="imgresource.alttitle">imgResource</label>
+			<label index="jumpurl.alttitle">jumpUrl</label>
+			<label index="kickstarter.alttitle">kickstarter</label>
+			<label index="lamp.alttitle">LAMP</label>
+			<label index="local_lang.alttitle">local_lang</label>
+			<label index="localconf.alttitle">localconf</label>
+			<label index="locallang.alttitle">locallang</label>
+			<label index="mysql.alttitle">MySQL</label>
+			<label index="nicetext.alttitle">niceText</label>
+			<label index="no_cache.alttitle">no_cache</label>
+			<label index="optionsplit.alttitle">optionSplit</label>
+			<label index="parsefunc.alttitle">parseFunc</label>
+			<label index="pid.alttitle">pid</label>
+			<label index="rdct.alttitle">RDCT</label>
+			<label index="rte.alttitle">RTE</label>
+			<label index="simulatestaticdocuments.alttitle">simulateStaticDocuments</label>
+			<label index="stdwrap.alttitle">stdWrap</label>
+			<label index="stylescontent.alttitle">styles.content</label>
+			<label index="stylescontent_default.alttitle">styles.content (default)</label>
+			<label index="stylescontentget.alttitle">styles.content.get</label>
+			<label index="sysfolder.alttitle">SysFolder</label>
+			<label index="t3lib.alttitle">t3lib</label>
+			<label index="t3lib_div.alttitle">t3lib_div</label>
+			<label index="tca.alttitle">TCA</label>
+			<label index="tce.alttitle">TCE</label>
+			<label index="templavoila.alttitle">TemplaVoila</label>
+			<label index="ter.alttitle">TER</label>
+			<label index="tlo.alttitle">TLO</label>
+			<label index="toc.alttitle">TOC</label>
+			<label index="ts.alttitle">TS</label>
+			<label index="tsconfig.alttitle">TSconfig</label>
+			<label index="tsfe.alttitle">TSFE</label>
+			<label index="tsref.alttitle">TSref</label>
+			<label index="tt_content.alttitle">tt_content</label>
+			<label index="typo3_conf_vars.alttitle">TYPO3_CONF_VARS</label>
+			<label index="typoscript.alttitle">Typoscript</label>
+			<label index="uid.alttitle">UID</label>
+			<label index="user.alttitle">USER</label>
+			<label index="user_int.alttitle">USER_INT</label>
+			<label index="userfunc.alttitle">userFunc</label>
+			<label index="wamp.alttitle">WAMP</label>
+			<label index="wcms.alttitle">WCMS</label>
+			<label index="x-html.alttitle">X-HTML</label>
+			<label index="xhtml.alttitle">XHTML</label>
+			<label index="xml.alttitle">XML</label>
+			<label index="xslt.alttitle">XSLT</label>
+			<label index=".alttitle">TYPO3 glossary</label>
+			<label index=".description">Glossary of TYPO3 related terms.</label>
+		</languageKey>
+	</orig_text>
+</T3locallangExt>

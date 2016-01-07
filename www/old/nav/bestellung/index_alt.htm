@@ -1,0 +1,612 @@
+<html>
+<head>
+<title>Bestellformular - Verlag Edition Tirol</title>
+
+</head>
+
+<body bgcolor="#000080" background="../../bilder/vorlage/hg1.jpg">
+<script language="JavaScript">
+  <!--
+     function fotoanzeigen(url)
+     {
+        var InfoWin = window.open(url, "Zweitfenster", "scrollbars=yes,width=400,height=400,resizable=yes");
+        InfoWin.focus();
+/*      parent.frames[F1].location.href=URL1; */
+     }
+    //-->
+    
+</script>
+  
+<script language="JavaScript">
+ <!--
+function CheckInput()
+  {
+   var Fehler=0;
+
+   if(document.anfrage.e_mail.value == "")
+    {
+     Fehler=1;
+     alert("\n\n Bitte geben Sie Ihre E-Mail Adresse ein \n\n");
+     document.anfrage.e_mail.focus();
+     return;
+    }
+
+        if(Fehler  == 0)
+     document.anfrage.submit();
+  }
+ // -->
+</script>
+<form action="http://www.mynet.at/formail/send.php" method="POST" name="anfrage">
+  <p align="left"> <font face="Verdana, Arial, Helvetica, sans-serif"> 
+   
+    <input type=hidden name="mail_adresse" value="verlag@edition-tirol.com">
+    <input type=hidden name="betreff" value="Online Buchbestellung">
+    <input type=hidden name="redirect" value="http://www.edition-tirol.com/nav/bestellung/danke.htm">
+    </font></p>
+  <center>
+    <table width="80%" border="0" cellspacing="0" cellpadding="0">
+      <tr> 
+        <td>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" background="../../bilder/vorlage/hg3.jpg">
+            <tr> 
+              <td> 
+                <table border=0 cellpadding=5 width=100% align="center" background="../../bilder/vorlage/1pixel.gif">
+                  <tr>
+                    <td valign=center colspan=3>
+                      <div align="center"><font face="Arial, Helvetica, sans-serif" size="4"><b><font color="#99FFFF" size="5"><u>BESTELLFORMULAR 
+                        </u> </font> </b></font> </div>
+                      <hr>
+                      <br>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td valign=center colspan=3> 
+                      <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" color="#0000CC"><b><font color="#99FFFF" face="Arial, Helvetica, sans-serif">Ich 
+                        möchte folgende B&uuml;cher bestellen/<br>
+                        I want to order following books:</font></b></font> 
+                        <hr>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td height="41"><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF">Erstes 
+                      Buch/first book:<br>
+                      </font></b><font face="Arial, Helvetica, sans-serif" color="#99FFFF"> 
+                      <font size="2"> 
+                      <select name="01_Buch1" size="1">
+                        <option>-</option>
+                        <option>1000 Jahre Tirol</option>
+                        <option>100 und ein Stein</option>
+                        <option>1.111 Gstanzl &amp; Schnaderh&uuml;pfln</option>
+                        <option>Alte Hausinschriften aus den Alpen</option>
+                        <option>Aufananda zuageah</option>
+                        <option>Auf den Spuren der Weihnachtskrippe</option>
+                        <option>Auf der Flucht</option>
+                        <option>Ausg&acute;rutscht &amp; zsammentutscht</option>
+                        <option>Biblische und fr&uuml;hchristliche St&auml;tten</option>
+                        <option>Bilder einer Ausstellung</option>
+                        <option>Colonia Tirol</option>
+                        <option>Das Goldene Dachl</option>
+                        <option>Das Zillertal in alten Ansichten</option>
+                        <option>Der Beichtzettel im Wandel der Zeit</option>
+                        <option>Der Drache von Wildsch&ouml;nau</option>
+                        <option>Der Himmel kann warten</option>
+                        <option>Die Geschichte von Schloss Matzen</option>
+                        <option>Die Herrenberger 1 - Orgelpfeifen</option>
+                        <option>Die kleinen Dinge sind&acute;s im Lebn</option>
+                        <option>Die Lebenseiche</option>
+                        <option>Die Rinderrasse der Tux-Zillertaler</option>
+                        <option>Die Zillertaler Nationals&auml;nger</option>
+                        <option>Drei Sommer in Tirol</option>
+                        <option>Epigrammaton Libellus I</option>
+                        <option>Gedichte fein zum Strau&szlig; gebunden</option>
+                        <option>Heitere in rot-weiss-rot</option>
+                        <option>Ich, die Brille</option>
+                        <option>Im Sonnenlicht</option>
+                        <option>I schenk dia de Sunn</option>
+                        <option>Innsbrucker Stadtansichten</option>
+                        <option>Jakob Binder</option>
+                        <option>Johann &amp; Anton Aschaber</option>
+                        <option>Julia Walliser</option>
+                        <option>Kaiserliches Hofgel&auml;chter</option>
+                        <option>Kinder- und Hausm&auml;rchen</option>
+                        <option>Kraft aus der Stille</option>
+                        <option>Maik&auml;fer flieg ...</option>
+                        <option>Matzener Album</option>
+                        <option>Memories</option>
+                        <option>Mittn im Leb&acute;n</option>
+                        <option>&Ouml;rge</option>
+                        <option>&Ouml;tzi - Das Geheimnis d. H. Steines</option>
+                        <option>&Ouml;tzis K&auml;tzchen Karli</option>
+                        <option>Sand aus Sahocasia</option>
+                        <option>Schwendau</option>
+                        <option>Sommerfr. und benedikt. Gastlichkeit am Achensee</option>
+                        <option>Staub des Lebens</option>
+                        <option>Stunden geliehenen Gl&uuml;cks</option>
+                        <option>St&uuml;rmt die Burg</option>
+                        <option>Tirol in alten Ansichten</option>
+                        <option>&Uuml;ber die Tiroler/Der Mythos v. T.</option>
+                        <option>Zillertaler Album</option>
+                        <option>Die Rache der Borgia</option>
+                        <option>Wallfahrt St. Georgenberg</option>
+                        <option>Das Goldene Zeitalter</option>
+                        <option>Rikki der kleine Teufel</option>
+                        <option>Hinkender Riese Mohikaner</option>
+                        <option>Apropos</option>
+                        <option>Notburga</option>
+                        <option>Tiroler Bergweihnacht</option>
+                        <option>Weerberg</option>
+                        <option>Franz Eberlein&acute;s Meisterwerke</option>
+                        <option>Ich ging mit</option>
+                        <option>Florian Wieselflink</option>
+                        <option>Zwergenwelt f&uuml;r Enkelkinder</option>
+                        <option>Gedanken, die das Leben schrieb</option>
+                        <option>Grisel, Grusel &amp; Rambusel</option>
+                        <option>Im Zeichen des Mondes</option>
+                        <option>Weil i di mog</option>
+                        <option>Kraut und Ruam</option>
+                        <option>100 und 1 Wasser</option>
+                        <option>Pr&auml;historischer Bergbau</option>
+                        <option>Herrenberger Teil 2</option>
+                        <option>g&acute;flogn</option>
+                      </select>
+                      </font></font></td>
+                    <td height="41"> 
+                      <div align="right"><font face="Arial, Helvetica, sans-serif" color="#99FFFF"><b>St&uuml;ck/copies:<br>
+                        <font size="2"> 
+                        <input type="text" name="02_Buch1-Stueck" maxlength="3" size="5">
+                        </font></b></font></div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF">Zweites 
+                      Buch/second book:<br>
+                      </font></b><font face="Arial, Helvetica, sans-serif" color="#99FFFF"><font size="2"> 
+                      <select name="03_Buch2" size="1">
+                        <option>-</option>
+                         <option>1000 Jahre Tirol</option>
+                        <option>100 und ein Stein</option>
+                        <option>1.111 Gstanzl &amp; Schnaderh&uuml;pfln</option>
+                        <option>Alte Hausinschriften aus den Alpen</option>
+                        <option>Aufananda zuageah</option>
+                        <option>Auf den Spuren der Weihnachtskrippe</option>
+                        <option>Auf der Flucht</option>
+                        <option>Ausg&acute;rutscht &amp; zsammentutscht</option>
+                        <option>Biblische und fr&uuml;hchristliche St&auml;tten</option>
+                        <option>Bilder einer Ausstellung</option>
+                        <option>Colonia Tirol</option>
+                        <option>Das Goldene Dachl</option>
+                        <option>Das Zillertal in alten Ansichten</option>
+                        <option>Der Beichtzettel im Wandel der Zeit</option>
+                        <option>Der Drache von Wildsch&ouml;nau</option>
+                        <option>Der Himmel kann warten</option>
+                        <option>Die Geschichte von Schloss Matzen</option>
+                        <option>Die Herrenberger 1 - Orgelpfeifen</option>
+                        <option>Die kleinen Dinge sind&acute;s im Lebn</option>
+                        <option>Die Lebenseiche</option>
+                        <option>Die Rinderrasse der Tux-Zillertaler</option>
+                        <option>Die Zillertaler Nationals&auml;nger</option>
+                        <option>Drei Sommer in Tirol</option>
+                        <option>Epigrammaton Libellus I</option>
+                        <option>Gedichte fein zum Strau&szlig; gebunden</option>
+                        <option>Heitere in rot-weiss-rot</option>
+                        <option>Ich, die Brille</option>
+                        <option>Im Sonnenlicht</option>
+                        <option>I schenk dia de Sunn</option>
+                        <option>Innsbrucker Stadtansichten</option>
+                        <option>Jakob Binder</option>
+                        <option>Johann &amp; Anton Aschaber</option>
+                        <option>Julia Walliser</option>
+                        <option>Kaiserliches Hofgel&auml;chter</option>
+                        <option>Kinder- und Hausm&auml;rchen</option>
+                        <option>Kraft aus der Stille</option>
+                        <option>Maik&auml;fer flieg ...</option>
+                        <option>Matzener Album</option>
+                        <option>Memories</option>
+                        <option>Mittn im Leb&acute;n</option>
+                        <option>&Ouml;rge</option>
+                        <option>&Ouml;tzi - Das Geheimnis d. H. Steines</option>
+                        <option>&Ouml;tzis K&auml;tzchen Karli</option>
+                        <option>Sand aus Sahocasia</option>
+                        <option>Schwendau</option>
+                        <option>Sommerfr. und benedikt. Gastlichkeit am Achensee</option>
+                        <option>Staub des Lebens</option>
+                        <option>Stunden geliehenen Gl&uuml;cks</option>
+                        <option>St&uuml;rmt die Burg</option>
+                        <option>Tirol in alten Ansichten</option>
+                        <option>&Uuml;ber die Tiroler/Der Mythos v. T.</option>
+                        <option>Zillertaler Album</option>
+                        <option>Die Rache der Borgia</option>
+                        <option>Wallfahrt St. Georgenberg</option>
+                        <option>Das Goldene Zeitalter</option>
+                        <option>Rikki der kleine Teufel</option>
+                        <option>Hinkender Riese Mohikaner</option>
+                        <option>Apropos</option>
+                        <option>Notburga</option>
+                        <option>Tiroler Bergweihnacht</option>
+                        <option>Weerberg</option>
+                        <option>Franz Eberlein&acute;s Meisterwerke</option>
+                        <option>Ich ging mit</option>
+                        <option>Florian Wieselflink</option>
+                        <option>Zwergenwelt f&uuml;r Enkelkinder</option>
+                        <option>Gedanken, die das Leben schrieb</option>
+                        <option>Grisel, Grusel &amp; Rambusel</option>
+                        <option>Im Zeichen des Mondes</option>
+                        <option>Weil i di mog</option>
+                        <option>Kraut und Ruam</option>
+                        <option>100 und 1 Wasser</option>
+                        <option>Pr&auml;historischer Bergbau</option>
+                        <option>Herrenberger Teil 2</option>
+                        <option>g&acute;flogn</option>
+                      </select>
+                      </font></font> <font face="Arial" size="2">&nbsp;</font></td>
+                    <td> 
+                      <div align="right"><font face="Arial, Helvetica, sans-serif" color="#99FFFF"><b>St&uuml;ck/copies:<br>
+                        <font size="2"> 
+                        <input type="text" name="04_Buch2-Stueck" maxlength="3" size="5">
+                        </font></b></font></div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF">Drittes 
+                      Buch/third book:<br>
+                      </font></b><font face="Arial, Helvetica, sans-serif" color="#99FFFF"><font size="2"> 
+                      <select name="05_Buch3" size="1">
+                        <option>-</option>
+                         <option>1000 Jahre Tirol</option>
+                        <option>100 und ein Stein</option>
+                        <option>1.111 Gstanzl &amp; Schnaderh&uuml;pfln</option>
+                        <option>Alte Hausinschriften aus den Alpen</option>
+                        <option>Aufananda zuageah</option>
+                        <option>Auf den Spuren der Weihnachtskrippe</option>
+                        <option>Auf der Flucht</option>
+                        <option>Ausg&acute;rutscht &amp; zsammentutscht</option>
+                        <option>Biblische und fr&uuml;hchristliche St&auml;tten</option>
+                        <option>Bilder einer Ausstellung</option>
+                        <option>Colonia Tirol</option>
+                        <option>Das Goldene Dachl</option>
+                        <option>Das Zillertal in alten Ansichten</option>
+                        <option>Der Beichtzettel im Wandel der Zeit</option>
+                        <option>Der Drache von Wildsch&ouml;nau</option>
+                        <option>Der Himmel kann warten</option>
+                        <option>Die Geschichte von Schloss Matzen</option>
+                        <option>Die Herrenberger 1 - Orgelpfeifen</option>
+                        <option>Die kleinen Dinge sind&acute;s im Lebn</option>
+                        <option>Die Lebenseiche</option>
+                        <option>Die Rinderrasse der Tux-Zillertaler</option>
+                        <option>Die Zillertaler Nationals&auml;nger</option>
+                        <option>Drei Sommer in Tirol</option>
+                        <option>Epigrammaton Libellus I</option>
+                        <option>Gedichte fein zum Strau&szlig; gebunden</option>
+                        <option>Heitere in rot-weiss-rot</option>
+                        <option>Ich, die Brille</option>
+                        <option>Im Sonnenlicht</option>
+                        <option>I schenk dia de Sunn</option>
+                        <option>Innsbrucker Stadtansichten</option>
+                        <option>Jakob Binder</option>
+                        <option>Johann &amp; Anton Aschaber</option>
+                        <option>Julia Walliser</option>
+                        <option>Kaiserliches Hofgel&auml;chter</option>
+                        <option>Kinder- und Hausm&auml;rchen</option>
+                        <option>Kraft aus der Stille</option>
+                        <option>Maik&auml;fer flieg ...</option>
+                        <option>Matzener Album</option>
+                        <option>Memories</option>
+                        <option>Mittn im Leb&acute;n</option>
+                        <option>&Ouml;rge</option>
+                        <option>&Ouml;tzi - Das Geheimnis d. H. Steines</option>
+                        <option>&Ouml;tzis K&auml;tzchen Karli</option>
+                        <option>Sand aus Sahocasia</option>
+                        <option>Schwendau</option>
+                        <option>Sommerfr. und benedikt. Gastlichkeit am Achensee</option>
+                        <option>Staub des Lebens</option>
+                        <option>Stunden geliehenen Gl&uuml;cks</option>
+                        <option>St&uuml;rmt die Burg</option>
+                        <option>Tirol in alten Ansichten</option>
+                        <option>&Uuml;ber die Tiroler/Der Mythos v. T.</option>
+                        <option>Zillertaler Album</option>
+                        <option>Die Rache der Borgia</option>
+                        <option>Wallfahrt St. Georgenberg</option>
+                        <option>Das Goldene Zeitalter</option>
+                        <option>Rikki der kleine Teufel</option>
+                        <option>Hinkender Riese Mohikaner</option>
+                        <option>Apropos</option>
+                        <option>Notburga</option>
+                        <option>Tiroler Bergweihnacht</option>
+                        <option>Weerberg</option>
+                        <option>Franz Eberlein&acute;s Meisterwerke</option>
+                        <option>Ich ging mit</option>
+                        <option>Florian Wieselflink</option>
+                        <option>Zwergenwelt f&uuml;r Enkelkinder</option>
+                        <option>Gedanken, die das Leben schrieb</option>
+                        <option>Grisel, Grusel &amp; Rambusel</option>
+                        <option>Im Zeichen des Mondes</option>
+                        <option>Weil i di mog</option>
+                        <option>Kraut und Ruam</option>
+                        <option>100 und 1 Wasser</option>
+                        <option>Pr&auml;historischer Bergbau</option>
+                        <option>Herrenberger Teil 2</option>
+                        <option>g&acute;flogn</option>
+                      </select>
+                      </font></font> <font face="Arial" size="2">&nbsp;</font></td>
+                    <td> 
+                      <div align="right"><font face="Arial, Helvetica, sans-serif" color="#99FFFF"><b>St&uuml;ck/copies:<br>
+                        <font size="2"> 
+                        <input type="text" name="06_Buch3-Stueck" maxlength="3" size="5">
+                        </font></b></font></div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF">Viertes 
+                      Buch/forth book:<br>
+                      </font></b><font face="Arial, Helvetica, sans-serif" color="#99FFFF" size="2"> 
+                      <select name="07_Buch4" size="1">
+                        <option>-</option>
+                        <option>1000 Jahre Tirol</option>
+                        <option>100 und ein Stein</option>
+                        <option>1.111 Gstanzl &amp; Schnaderh&uuml;pfln</option>
+                        <option>Alte Hausinschriften aus den Alpen</option>
+                        <option>Aufananda zuageah</option>
+                        <option>Auf den Spuren der Weihnachtskrippe</option>
+                        <option>Auf der Flucht</option>
+                        <option>Ausg&acute;rutscht &amp; zsammentutscht</option>
+                        <option>Biblische und fr&uuml;hchristliche St&auml;tten</option>
+                        <option>Bilder einer Ausstellung</option>
+                        <option>Colonia Tirol</option>
+                        <option>Das Goldene Dachl</option>
+                        <option>Das Zillertal in alten Ansichten</option>
+                        <option>Der Beichtzettel im Wandel der Zeit</option>
+                        <option>Der Drache von Wildsch&ouml;nau</option>
+                        <option>Der Himmel kann warten</option>
+                        <option>Die Geschichte von Schloss Matzen</option>
+                        <option>Die Herrenberger 1 - Orgelpfeifen</option>
+                        <option>Die kleinen Dinge sind&acute;s im Lebn</option>
+                        <option>Die Lebenseiche</option>
+                        <option>Die Rinderrasse der Tux-Zillertaler</option>
+                        <option>Die Zillertaler Nationals&auml;nger</option>
+                        <option>Drei Sommer in Tirol</option>
+                        <option>Epigrammaton Libellus I</option>
+                        <option>Gedichte fein zum Strau&szlig; gebunden</option>
+                        <option>Heitere in rot-weiss-rot</option>
+                        <option>Ich, die Brille</option>
+                        <option>Im Sonnenlicht</option>
+                        <option>I schenk dia de Sunn</option>
+                        <option>Innsbrucker Stadtansichten</option>
+                        <option>Jakob Binder</option>
+                        <option>Johann &amp; Anton Aschaber</option>
+                        <option>Julia Walliser</option>
+                        <option>Kaiserliches Hofgel&auml;chter</option>
+                        <option>Kinder- und Hausm&auml;rchen</option>
+                        <option>Kraft aus der Stille</option>
+                        <option>Maik&auml;fer flieg ...</option>
+                        <option>Matzener Album</option>
+                        <option>Memories</option>
+                        <option>Mittn im Leb&acute;n</option>
+                        <option>&Ouml;rge</option>
+                        <option>&Ouml;tzi - Das Geheimnis d. H. Steines</option>
+                        <option>&Ouml;tzis K&auml;tzchen Karli</option>
+                        <option>Sand aus Sahocasia</option>
+                        <option>Schwendau</option>
+                        <option>Sommerfr. und benedikt. Gastlichkeit am Achensee</option>
+                        <option>Staub des Lebens</option>
+                        <option>Stunden geliehenen Gl&uuml;cks</option>
+                        <option>St&uuml;rmt die Burg</option>
+                        <option>Tirol in alten Ansichten</option>
+                        <option>&Uuml;ber die Tiroler/Der Mythos v. T.</option>
+                        <option>Zillertaler Album</option>
+                        <option>Die Rache der Borgia</option>
+                        <option>Wallfahrt St. Georgenberg</option>
+                        <option>Das Goldene Zeitalter</option>
+                        <option>Rikki der kleine Teufel</option>
+                        <option>Hinkender Riese Mohikaner</option>
+                        <option>Apropos</option>
+                        <option>Notburga</option>
+                        <option>Tiroler Bergweihnacht</option>
+                        <option>Weerberg</option>
+                        <option>Franz Eberlein&acute;s Meisterwerke</option>
+                        <option>Ich ging mit</option>
+                        <option>Florian Wieselflink</option>
+                        <option>Zwergenwelt f&uuml;r Enkelkinder</option>
+                        <option>Gedanken, die das Leben schrieb</option>
+                        <option>Grisel, Grusel &amp; Rambusel</option>
+                        <option>Im Zeichen des Mondes</option>
+                        <option>Weil i di mog</option>
+                        <option>Kraut und Ruam</option>
+                        <option>100 und 1 Wasser</option>
+                        <option>Pr&auml;historischer Bergbau</option>
+                        <option>Herrenberger Teil 2</option>
+                        <option>g&acute;flogn</option>
+                      </select>
+                      </font> <font face="Arial" size="2">&nbsp;</font></td>
+                    <td> 
+                      <div align="right"><font face="Arial, Helvetica, sans-serif" color="#99FFFF"><b>St&uuml;ck/copies:<br>
+                        <font size="2"> 
+                        <input type="text" name="08_Buch4-Stueck" maxlength="3" size="5">
+                        </font></b></font></div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF">F&uuml;nftes 
+                      Buch/fifth book:<br>
+                      </font></b><font face="Arial, Helvetica, sans-serif" color="#99FFFF" size="2"> 
+                      <select name="09_Buch5" size="1">
+                        <option>-</option>
+                        <option>1000 Jahre Tirol</option>
+                        <option>100 und ein Stein</option>
+                        <option>1.111 Gstanzl &amp; Schnaderh&uuml;pfln</option>
+                        <option>Alte Hausinschriften aus den Alpen</option>
+                        <option>Aufananda zuageah</option>
+                        <option>Auf den Spuren der Weihnachtskrippe</option>
+                        <option>Auf der Flucht</option>
+                        <option>Ausg&acute;rutscht &amp; zsammentutscht</option>
+                        <option>Biblische und fr&uuml;hchristliche St&auml;tten</option>
+                        <option>Bilder einer Ausstellung</option>
+                        <option>Colonia Tirol</option>
+                        <option>Das Goldene Dachl</option>
+                        <option>Das Zillertal in alten Ansichten</option>
+                        <option>Der Beichtzettel im Wandel der Zeit</option>
+                        <option>Der Drache von Wildsch&ouml;nau</option>
+                        <option>Der Himmel kann warten</option>
+                        <option>Die Geschichte von Schloss Matzen</option>
+                        <option>Die Herrenberger 1 - Orgelpfeifen</option>
+                        <option>Die kleinen Dinge sind&acute;s im Lebn</option>
+                        <option>Die Lebenseiche</option>
+                        <option>Die Rinderrasse der Tux-Zillertaler</option>
+                        <option>Die Zillertaler Nationals&auml;nger</option>
+                        <option>Drei Sommer in Tirol</option>
+                        <option>Epigrammaton Libellus I</option>
+                        <option>Gedichte fein zum Strau&szlig; gebunden</option>
+                        <option>Heitere in rot-weiss-rot</option>
+                        <option>Ich, die Brille</option>
+                        <option>Im Sonnenlicht</option>
+                        <option>I schenk dia de Sunn</option>
+                        <option>Innsbrucker Stadtansichten</option>
+                        <option>Jakob Binder</option>
+                        <option>Johann &amp; Anton Aschaber</option>
+                        <option>Julia Walliser</option>
+                        <option>Kaiserliches Hofgel&auml;chter</option>
+                        <option>Kinder- und Hausm&auml;rchen</option>
+                        <option>Kraft aus der Stille</option>
+                        <option>Maik&auml;fer flieg ...</option>
+                        <option>Matzener Album</option>
+                        <option>Memories</option>
+                        <option>Mittn im Leb&acute;n</option>
+                        <option>&Ouml;rge</option>
+                        <option>&Ouml;tzi - Das Geheimnis d. H. Steines</option>
+                        <option>&Ouml;tzis K&auml;tzchen Karli</option>
+                        <option>Sand aus Sahocasia</option>
+                        <option>Schwendau</option>
+                        <option>Sommerfr. und benedikt. Gastlichkeit am Achensee</option>
+                        <option>Staub des Lebens</option>
+                        <option>Stunden geliehenen Gl&uuml;cks</option>
+                        <option>St&uuml;rmt die Burg</option>
+                        <option>Tirol in alten Ansichten</option>
+                        <option>&Uuml;ber die Tiroler/Der Mythos v. T.</option>
+                        <option>Zillertaler Album</option>
+                        <option>Die Rache der Borgia</option>
+                        <option>Wallfahrt St. Georgenberg</option>
+                        <option>Das Goldene Zeitalter</option>
+                        <option>Rikki der kleine Teufel</option>
+                        <option>Hinkender Riese Mohikaner</option>
+                        <option>Apropos</option>
+                        <option>Notburga</option>
+                        <option>Tiroler Bergweihnacht</option>
+                        <option>Weerberg</option>
+                        <option>Franz Eberlein&acute;s Meisterwerke</option>
+                        <option>Ich ging mit</option>
+                        <option>Florian Wieselflink</option>
+                        <option>Zwergenwelt f&uuml;r Enkelkinder</option>
+                        <option>Gedanken, die das Leben schrieb</option>
+                        <option>Grisel, Grusel &amp; Rambusel</option>
+                        <option>Im Zeichen des Mondes</option>
+                        <option>Weil i di mog</option>
+                        <option>Kraut und Ruam</option>
+                        <option>100 und 1 Wasser</option>
+                        <option>Pr&auml;historischer Bergbau</option>
+                        <option>Herrenberger Teil 2</option>
+                        <option>g&acute;flogn</option>
+                      </select>
+                      </font> <font face="Arial" size="2">&nbsp;</font></td>
+                    <td> 
+                      <div align="right"><font face="Arial, Helvetica, sans-serif" color="#99FFFF"><b>St&uuml;ck/copies:<br>
+                        <font size="2"> 
+                        <input type="text" name="10_Buch5-Stueck" maxlength="3" size="5">
+                        </font></b></font></div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"> 
+                      <hr>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"> 
+                      <p><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF"><font size="2"> 
+                        </font></font></b> <font size="2"> </font></p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" color="#0000CC"><b><font color="#99FFFF" face="Arial, Helvetica, sans-serif">Name/name:</font><font color="#99FFFF" face="Arial, Helvetica, sans-serif"><font size="2"><br>
+                      </font></font> </b></font> <font size="2"> 
+                      <input name="11_Name"  value="" size=50 maxlength=100>
+                      </font> </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#99FFFF" size="3" face="Arial, Helvetica, sans-serif">Wohnort/city:</font><font color="#99FFFF" size="3" face="Arial, Helvetica, sans-serif"><font size="2"><br>
+                      </font></font></b></font> <font size="2"> 
+                      <input name="12_Wohnort"  value = "" size=50 maxlength=100>
+                      </font> </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#99FFFF" size="3" face="Arial, Helvetica, sans-serif">Postleitzahl/post 
+                      code:<font size="2"><br>
+                      </font></font></b></font> <font size="2"> 
+                      <input name="13_Postleitzahl"  value = "" size=50 maxlength=100>
+                      </font> </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#99FFFF" face="Arial, Helvetica, sans-serif">Wohnadresse/street:<font size="2"><br>
+                      </font></font></b></font> <font size="2"> 
+                      <input name="14_Wohnadresse"  value = "" size=50 maxlength=100>
+                      </font> </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#99FFFF" face="Arial, Helvetica, sans-serif">Telefon/phone:<font size="2"><br>
+                      </font></font></b></font> <font size="2"> 
+                      <input name="15_Telefon" value="" size=50 maxlength=50>
+                      </font> </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"><font face="Arial"><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF">Fax:<font face="Arial"><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF"><font size="2"><br>
+                      </font></font></b></font><font size="2"> </font></font> 
+                      </b> </font> <font size="2"> 
+                      <input name="16_Fax" value="" size=50 maxlength=50>
+                      </font> </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"><font face="Arial"><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF">E-Mail<font size="2">:</font></font></b></font><font color="#99FFFF" size="2"><b><br>
+                      </b></font> <font size="2"> 
+                      <input name="e_mail" value="" size=50 maxlength=50>
+                      </font> </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2"> 
+                      <p align="left"><font color="#0000cc"><b><font face="Arial, Helvetica, sans-serif" color="#99FFFF">W&uuml;nsche</font><font face="Arial, Helvetica, sans-serif" color="#99FFFF">/wishes:</font><font color="#99FFFF" size="2"><br>
+                        </font></b></font> <font size="2"> 
+                        <textarea name="18_Nachricht/Wunsch" rows=5 cols=50></textarea>
+                        </font></p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td colspan="2" background="../../bilder/vorlage/1pixel.gif"> 
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr> 
+                          <td> 
+                            <div align="center"><font size=3> 
+                              <input type="BUTTON" name="OK" value="Abschicken/send" onClick="CheckInput()">
+                              </font></div>
+                          </td>
+                          <td> 
+                            <div align="center"></div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="../../bilder/vorlage/1pixel.gif" width="10" height="10"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    </center>
+</form>
+</body>
+</html>

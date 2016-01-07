@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'mw_mybooks'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">Booklist</label>
+			<label index="pi1_plus_wiz_description">lists all books of a certain category</label>
+			<label index="pi2_title">Random Books</label>
+			<label index="pi2_plus_wiz_description">Lists a number of random selected books</label>
+			<label index="pi3_title">Category List</label>
+			<label index="pi3_plus_wiz_description">Adds a list of all book categories</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="pi1_title">Buchliste</label>
+			<label index="pi1_plus_wiz_description">Listet alle Bücher einer bestimmten Kategorie auf.</label>
+			<label index="pi2_title">Zufällige Buchanzeige</label>
+			<label index="pi2_plus_wiz_description">Zeigt eine zufällige Auswahl von Büchern an</label>
+			<label index="pi3_title">Kategorieliste</label>
+			<label index="pi3_plus_wiz_description">Fügt eine Liste aller Buchkategorien ein</label>
+		</languageKey>
+	</data>
+</T3locallang>
