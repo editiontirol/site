@@ -1,0 +1,6 @@
+[submodule "www/old"]
+	path = www/old
+	url = ssh://git@github.com/editiontirol/site.legacy.git
+[submodule "www/wp-content/themes/edition-tirol-shop"]
+	path = www/wp-content/themes/edition-tirol-shop
+	url = ssh://git@github.com/editiontirol/site-theme.git
