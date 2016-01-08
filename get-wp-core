@@ -1,11 +1,13 @@
 #!/bin/sh
 
-CACHE=/tmp
+SCRIPT_DIR="$(cd "${0%/*}"; pwd)"
 
+source "$SCRIPT_DIR/config"
+
+CACHE=/tmp
 
 WP_VERSION='4.4.1'
 WP_LANGUAGES=(de_DE de_DE_formal)
-WP_PATH="$(cd ${0%/*}; pwd)/wp-core"
 
 WP_VERSION_MAJOR_MINOR=${WP_VERSION%%.*}.$(minor=${WP_VERSION#*.} && echo ${minor%%.*})
 
@@ -40,12 +42,13 @@ done
 # Plugins
 
 for plugin in \
+  language-fallback@1.0.3 \
   mailgun@1.4.1 \
   redirection@2.4.3 \
+  regenerate-thumbnails@2.2.6 \
+  underconstruction@1.16 \
   woocommerce@2.4.12 \
-  language-fallback@1.0.3 \
-  wp-optimize@1.8.9.10 \
-  regenerate-thumbnails@2.2.6
+  wp-optimize@1.8.9.10
 do
   version=${plugin##*@}
   plugin=${plugin%@*}
@@ -70,17 +73,14 @@ do
 done
 
 
-
-# Move to WP_PATH
-
-rsync --delete --delete-excluded --archive "$CACHE/wordpress/" "$WP_PATH" \
-  --exclude '/license.txt' \
-  --exclude '/liesmich.html' \
-  --exclude '/readme.html' \
-  --exclude '/wp-config-sample.php' \
-  --exclude '/wp-content/plugins/hello.php' \
-  --exclude '/wp-content/plugins/akismet' \
-  --exclude '/wp-content/languages/plugins/akismet*' \
-  --exclude '/wp-content/themes/twenty*' \
-  --exclude '/wp-content/languages/themes/twenty*' \
-  --exclude '/wp-content/plugins/wp-optimize/index.htm'
+rsync --delete-excluded --archive "$CACHE/wordpress/" "$WP_CORE_DIR" \
+  --exclude 'license.txt' \
+  --exclude 'liesmich.html' \
+  --exclude 'readme.html' \
+  --exclude 'wp-config-sample.php' \
+  --exclude 'wp-content/plugins/hello.php' \
+  --exclude 'wp-content/plugins/akismet' \
+  --exclude 'wp-content/languages/plugins/akismet*' \
+  --exclude 'wp-content/themes/twenty*' \
+  --exclude 'wp-content/languages/themes/twenty*' \
+  --exclude 'wp-content/plugins/wp-optimize/index.htm'

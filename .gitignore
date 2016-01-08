@@ -1,12 +1,7 @@
-# Data
-
-/www/uploads/**/*-*x*.png
-/www/uploads/**/*-*x*.jpg
-
-
 # Build
 
-/wp-core
+.cache
+
 
 # Wordpress
 

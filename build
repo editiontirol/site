@@ -1,0 +1,22 @@
+#!/bin/sh
+
+SCRIPT_DIR="$(cd "${0%/*}"; pwd)"
+
+source "$SCRIPT_DIR/config"
+
+mkdir -p "$DEPLOY_DIR"
+
+if [ ! -d "$SCRIPT_DIR/.wp-cache" ]; then
+  echo "WordPress Core not found. Try running ./get-wp-core …"
+  exit 1;
+fi
+
+
+# Site
+rsync --archive --compress --progress --delete "$LOCAL_DIR/" "$DEPLOY_DIR/"
+
+# Uploads
+rsync --archive --compress --progress "$LOCAL_DIR_UPLOADS/" "$DEPLOY_DIR/uploads/"
+
+# Core
+rsync --archive --compress --progress "$WP_CORE_DIR/" "$DEPLOY_DIR/"

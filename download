@@ -1,5 +1,0 @@
-#!/bin/sh
-
-SCRIPT_DIR="$(cd ${0%/*}; pwd)"
-
-rsync --archive --compress --progress "editiontirol@eleven2:~/public_html/" "${SCRIPT_DIR}/www/"
