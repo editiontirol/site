@@ -13,8 +13,7 @@ fi
 # Old Website and Theme
 
 cd "$SCRIPT_DIR"
-  git pull --recurse-submodules
-  git submodule update --remote --recursive
+  git submodule foreach "git checkout master; git pull"
 cd - &>/dev/null
 
 # Site Content
