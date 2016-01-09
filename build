@@ -16,11 +16,8 @@ cd "$SCRIPT_DIR"
   git submodule update --recursive
 cd - &>/dev/null
 
-# Site
+# Site Content
 rsync --archive --compress --delete "$LOCAL_DIR/" "$DEPLOY_DIR/"
 
-# Uploads
-rsync --archive --compress --delete "$LOCAL_DIR_UPLOADS/" "$DEPLOY_DIR/uploads/"
-
-# Core
+# WordPress
 rsync --archive --compress "$WP_CORE_DIR/" "$DEPLOY_DIR/"

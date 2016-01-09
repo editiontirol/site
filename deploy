@@ -8,8 +8,11 @@ if [ ! -d "$DEPLOY_DIR" ]; then
   "$SCRIPT_DIR/build" || rm -rf "$DEPLOY_DIR" && exit 1
 fi
 
+scp "$SCRIPT_DIR/wp-config-production.php" "$SSH_USER@$SSH_HOST:$REMOTE_DIR/"
+
+"$SCRIPT_DIR/sync-uploads"
+
 rsync --archive --compress --delete-after "$DEPLOY_DIR/" "$SSH_USER@$SSH_HOST:$REMOTE_DIR/www/" \
   --exclude .DS_Store \
   --exclude .git
 
-scp "$SCRIPT_DIR/wp-config-production.php" "$SSH_USER@$SSH_HOST:$REMOTE_DIR/"
