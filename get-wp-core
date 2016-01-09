@@ -32,6 +32,7 @@ download_and_check() {
 
 rm -rf "$CACHE/wordpress"
 
+
 # WordPress Core
 
 for WP_LANGUAGE in ${WP_LANGUAGES[*]}; do
@@ -40,6 +41,8 @@ done
 
 
 # Plugins
+
+hash msgfmt || brew install gettext && brew link gettext --force
 
 for plugin in \
   language-fallback@1.0.3 \
@@ -55,22 +58,26 @@ do
 
   download_and_check "https://downloads.wordpress.org/plugin/$plugin.$version.zip"
 
-
   for WP_LANGUAGE in ${WP_LANGUAGES[*]}; do
-    url="https://i18n.trac.wordpress.org/export/latest/plugins/$plugin/$version/$WP_LANGUAGE/$plugin-$WP_LANGUAGE.po"
+    file="$CACHE/wordpress/wp-content/languages/plugins/$plugin-$WP_LANGUAGE"
+    url="https://i18n.trac.wordpress.org/export/latest/plugins/$plugin/$version/$WP_LANGUAGE/${file##*/}.po"
+
 
     if curl --silent "$url" --head --fail --output /dev/null; then
       echo "Downloading '$WP_LANGUAGE' translation for $plugin"
 
-      curl --progress-bar --location "$url" -o "$CACHE/wordpress/wp-content/languages/plugins/${url##*/}"
+      curl --progress-bar --location "$url" -o "$file.po"
+
+      msgfmt "$file.po" -o "$file.mo"
     fi
   done
 
   rsync --archive "$CACHE/$plugin/" "$CACHE/wordpress/wp-content/plugins/$plugin" \
     --exclude '/license.txt' \
     --exclude '/readme.txt'
-
 done
+
+brew unlink gettext
 
 
 rsync --delete-excluded --archive "$CACHE/wordpress/" "$WP_CORE_DIR" \
