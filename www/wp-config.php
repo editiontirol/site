@@ -24,7 +24,6 @@
   } else {
     require_once(WP_CONFIG_PRODUCTION);
     define('DISALLOW_FILE_EDIT', true);
-    define('WP_CACHE', true);
     define('WP_DEBUG', false);
   }
 
