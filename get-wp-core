@@ -50,7 +50,7 @@ for plugin in \
   redirection@2.4.3 \
   regenerate-thumbnails@2.2.6 \
   underconstruction@1.16 \
-  woocommerce@2.4.12 \
+  woocommerce@2.4.13 \
   wp-optimize@1.8.9.10
 do
   version=${plugin##*@}
