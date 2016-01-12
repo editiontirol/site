@@ -13,6 +13,7 @@ fi
 # Old Website and Theme
 
 cd "$SCRIPT_DIR"
+  git submodule update --force
   git submodule foreach "git checkout master; git pull"
 cd - &>/dev/null
 
