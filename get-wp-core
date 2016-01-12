@@ -12,11 +12,9 @@ WP_LANGUAGES=(de_DE de_DE_formal)
 WP_VERSION_MAJOR_MINOR=${WP_VERSION%%.*}.$(minor=${WP_VERSION#*.} && echo ${minor%%.*})
 
 download_and_check() {
-
   url="${1}"
   name="${url##*/}"
   path="$CACHE/$name"
-  sha256=${2}
 
   if [ ! -f "$path" ]; then
     echo "Downloading ${name}"
