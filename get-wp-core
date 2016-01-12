@@ -90,4 +90,5 @@ rsync --delete-excluded --archive "$CACHE/wordpress/" "$WP_CORE_DIR" \
   --exclude 'wp-content/languages/plugins/akismet*' \
   --exclude 'wp-content/themes/twenty*' \
   --exclude 'wp-content/languages/themes/twenty*' \
-  --exclude 'wp-content/plugins/wp-optimize/index.htm'
+  --exclude 'wp-content/plugins/wp-optimize/index.htm' \
+  --exclude 'wp-content/plugins/redirection/locale/redirection-de_DE.*'
