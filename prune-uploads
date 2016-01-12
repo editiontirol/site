@@ -4,5 +4,7 @@ SCRIPT_DIR="$(cd "${0%/*}"; pwd)"
 
 source "$SCRIPT_DIR/config"
 
+ssh editiontirol@eleven2 ln -s "$REMOTE_DIR_UPLOADS" "$REMOTE_DIR/www/uploads"
+
 rsync --archive --compress --progress --delete-excluded "$LOCAL_DIR_UPLOADS/" "$SSH_USER@$SSH_HOST:$REMOTE_DIR_UPLOADS/" \
   --exclude .DS_Store
