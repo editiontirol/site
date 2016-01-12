@@ -51,23 +51,26 @@ for plugin in \
   woocommerce@2.4.13 \
   wp-optimize@1.8.9.10
 do
-  version=${plugin##*@}
-  plugin=${plugin%@*}
+  plugin_version="${plugin##*@}"
+  plugin_version_major_minor="${plugin_version%%.*}.$(minor="${plugin_version#*.}" && echo "${minor%%.*}")"
 
-  download_and_check "https://downloads.wordpress.org/plugin/$plugin.$version.zip"
+  plugin="${plugin%@*}"
 
-  for WP_LANGUAGE in ${WP_LANGUAGES[*]}; do
-    file="$CACHE/wordpress/wp-content/languages/plugins/$plugin-$WP_LANGUAGE"
-    url="https://i18n.trac.wordpress.org/export/latest/plugins/$plugin/$version/$WP_LANGUAGE/${file##*/}.po"
+  download_and_check "https://downloads.wordpress.org/plugin/$plugin.$plugin_version.zip"
 
+  for version in "${plugin_version_major_minor}" "${plugin_version}"; do
+    for WP_LANGUAGE in ${WP_LANGUAGES[*]}; do
+      file="$CACHE/wordpress/wp-content/languages/plugins/$plugin-$WP_LANGUAGE"
+      url="https://i18n.trac.wordpress.org/export/latest/plugins/$plugin/$version/$WP_LANGUAGE/${file##*/}.po"
 
-    if curl --silent "$url" --head --fail --output /dev/null; then
-      echo "Downloading '$WP_LANGUAGE' translation for $plugin"
+      if curl --silent "$url" --head --fail --output /dev/null; then
+        echo "Downloading '$WP_LANGUAGE' translation for $plugin"
 
-      curl --progress-bar --location "$url" -o "$file.po"
+        curl --progress-bar --location "$url" -o "$file.po"
 
-      msgfmt "$file.po" -o "$file.mo"
-    fi
+        msgfmt "$file.po" -o "$file.mo"
+      fi
+    done
   done
 
   rsync --archive "$CACHE/$plugin/" "$CACHE/wordpress/wp-content/plugins/$plugin" \
