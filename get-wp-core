@@ -58,8 +58,8 @@ do
 
   download_and_check "https://downloads.wordpress.org/plugin/$plugin.$plugin_version.zip"
 
-  for version in "${plugin_version_major_minor}" "${plugin_version}"; do
-    for WP_LANGUAGE in ${WP_LANGUAGES[*]}; do
+  for WP_LANGUAGE in ${WP_LANGUAGES[*]}; do
+    for version in "${plugin_version_major_minor}" "${plugin_version}"; do
       file="$CACHE/wordpress/wp-content/languages/plugins/$plugin-$WP_LANGUAGE"
       url="https://i18n.trac.wordpress.org/export/latest/plugins/$plugin/$version/$WP_LANGUAGE/${file##*/}.po"
 
@@ -71,6 +71,22 @@ do
         msgfmt "$file.po" -o "$file.mo" || exit 1
       fi
     done
+
+    language="${WP_LANGUAGE%%_*}"
+    lang_version='default'
+
+    if [[ $WP_LANGUAGE == *"formal" ]]; then
+      lang_version='formal'
+    fi
+
+    url="https://translate.wordpress.org/projects/wp-plugins/$plugin/dev/$language/$lang_version/export-translations?filters%5Bstatus%5D=current_or_waiting_or_fuzzy_or_untranslated&format=mo"
+
+    file="$CACHE/wordpress/wp-content/languages/plugins/$plugin-$WP_LANGUAGE"
+    if curl --silent "$url" --head --fail --output /dev/null; then
+      echo "Downloading '$WP_LANGUAGE' translation for $plugin"
+
+      curl --progress-bar --location "$url" -o "$file.mo" || exit 1
+    fi
   done
 
   rsync --archive "$CACHE/$plugin/" "$CACHE/wordpress/wp-content/plugins/$plugin" \
