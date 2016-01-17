@@ -1,14 +1,15 @@
 <?php if(!defined('ABSPATH')) { die; }
 
 // Plugin Name: WooCommerce Pay on Pickup
-// Plugin URI:
+// Plugin URI:  https://github.com/editiontirol/woocommerce-pay-on-pickup
 // Description: Provides a “Pay on Pickup” option for WooCommerce.
 // Version:     1.0.0
 // Author:      Markus Reiter
 // Author URI:  http://reitermark.us
-// License:     GPL
+// License:     GPLv3
 // License URI: http://www.gnu.org/licenses/gpl-3.0.html
 // Text Domain: woocommerce-pay-on-pickup
+// Domain Path: /languages
 
 
 add_action('plugins_loaded', 'woocommerce_pay_on_pickup_init', 0);
@@ -22,6 +23,8 @@ function woocommerce_pay_on_pickup_init() {
   class WC_Payment_Gateway_Pay_On_Pickup extends WC_Payment_Gateway {
 
     public function __construct() {
+      load_plugin_textdomain('woocommerce-pay-on-pickup', false, dirname(plugin_basename( __FILE__ )) . '/languages');
+
       $this->id                 = 'pay_on_pickup';
       $this->icon               = apply_filters('woocommerce_pay_on_pickup_icon', '');
       $this->method_title       = __('Pay on Pickup', 'woocommerce-pay-on-pickup');
@@ -78,14 +81,14 @@ function woocommerce_pay_on_pickup_init() {
           'title'   => __('Description', 'woocommerce'),
           'type'  => 'textarea',
           'description' => __('Payment method description that the customer will see on your website.', 'woocommerce'),
-          'default'   => __('Pay with cash upon delivery.', 'woocommerce-pay-on-pickup' ),
+          'default'   => __('Pay when you pick up your order.', 'woocommerce-pay-on-pickup'),
           'desc_tip'  => true,
         ),
         'instructions' => array(
           'title'   => __('Instructions', 'woocommerce'),
           'type'  => 'textarea',
           'description' => __('Instructions that will be added to the thank you page.', 'woocommerce'),
-          'default'   => __('Pay with cash upon delivery.', 'woocommerce-pay-on-pickup'),
+          'default'   => __('Pay when you pick up your order.', 'woocommerce-pay-on-pickup'),
           'desc_tip'  => true,
         ),
         'enable_for_methods' => array(
