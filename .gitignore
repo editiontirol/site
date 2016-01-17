@@ -14,7 +14,6 @@
 /www/wp-content/languages/*.po
 /www/wp-content/languages/plugins/*.mo
 /www/wp-content/languages/plugins/*.po
-/www/wp-content/plugins/*/
 /www/wp-content/themes/*/
 !/www/wp-content/themes/edition-tirol-shop
 /www/wp-cron.php
