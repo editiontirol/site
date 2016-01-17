@@ -8,7 +8,7 @@ if [ ! -d "$DEPLOY_DIR" ]; then
   "$SCRIPT_DIR/build" || rm -rf "$DEPLOY_DIR" && exit 1
 fi
 
-scp "$SCRIPT_DIR/wp-config-production.php" "$SSH_USER@$SSH_HOST:$REMOTE_DIR/"
+scp "$SCRIPT_DIR/wp-config-production.php" "$SSH_USER@$SSH_HOST:$REMOTE_DIR/" || exit 1
 
 "$SCRIPT_DIR/sync-uploads"
 

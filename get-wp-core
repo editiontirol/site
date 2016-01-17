@@ -2,7 +2,7 @@
 
 SCRIPT_DIR="$(cd "${0%/*}"; pwd)"
 
-source "$SCRIPT_DIR/config"
+source "$SCRIPT_DIR/config" || exit 1
 
 CACHE=/tmp
 
@@ -18,17 +18,17 @@ download_and_check() {
 
   if [ ! -f "$path" ]; then
     echo "Downloading ${name}"
-    curl --progress-bar --location "$url" -o "$path"
+    curl --progress-bar --location "$url" -o "$path" || exit 1
   else
     echo "Already downloaded: $path"
   fi
 
   echo "Extracting $name"
-  unzip -q -o "$path" -d "$CACHE"
+  unzip -q -o "$path" -d "$CACHE" || exit 1
 
 }
 
-rm -rf "$CACHE/wordpress"
+rm -rf "$CACHE/wordpress" || exit 1
 
 
 # WordPress Core
@@ -40,7 +40,7 @@ done
 
 # Plugins
 
-hash msgfmt || brew install gettext && brew link gettext --force
+hash msgfmt || brew install gettext && brew link gettext --force || exit 1
 
 for plugin in \
   language-fallback@1.0.3 \
@@ -66,16 +66,16 @@ do
       if curl --silent "$url" --head --fail --output /dev/null; then
         echo "Downloading '$WP_LANGUAGE' translation for $plugin"
 
-        curl --progress-bar --location "$url" -o "$file.po"
+        curl --progress-bar --location "$url" -o "$file.po" || exit 1
 
-        msgfmt "$file.po" -o "$file.mo"
+        msgfmt "$file.po" -o "$file.mo" || exit 1
       fi
     done
   done
 
   rsync --archive "$CACHE/$plugin/" "$CACHE/wordpress/wp-content/plugins/$plugin" \
     --exclude '/license.txt' \
-    --exclude '/readme.txt'
+    --exclude '/readme.txt' || exit 1
 done
 
 brew unlink gettext
@@ -92,4 +92,4 @@ rsync --delete-excluded --archive "$CACHE/wordpress/" "$WP_CORE_DIR" \
   --exclude 'wp-content/themes/twenty*' \
   --exclude 'wp-content/languages/themes/twenty*' \
   --exclude 'wp-content/plugins/wp-optimize/index.htm' \
-  --exclude 'wp-content/plugins/redirection/locale/redirection-de_DE.*'
+  --exclude 'wp-content/plugins/redirection/locale/redirection-de_DE.*' || exit 1

@@ -4,7 +4,7 @@ SCRIPT_DIR="$(cd "${0%/*}"; pwd)"
 
 source "$SCRIPT_DIR/config"
 
-mkdir -p "$DEPLOY_DIR"
+mkdir -p "$DEPLOY_DIR" || exit 1
 
 if [ ! -d "$WP_CORE_DIR" ]; then
   "$SCRIPT_DIR/get-wp-core" || rm -rf "$WP_CORE_DIR" && exit 1
@@ -13,12 +13,12 @@ fi
 # Old Website and Theme
 
 cd "$SCRIPT_DIR"
-  git submodule update --force
-  git submodule foreach "git checkout master; git pull"
+  git submodule update --force || exit 1
+  git submodule foreach "git checkout master; git pull" || exit 1
 cd - &>/dev/null
 
 # Site Content
-rsync --archive --compress --delete "$LOCAL_DIR/" "$DEPLOY_DIR/"
+rsync --archive --compress --delete "$LOCAL_DIR/" "$DEPLOY_DIR/" || exit 1
 
 # WordPress
-rsync --archive --compress "$WP_CORE_DIR/" "$DEPLOY_DIR/"
+rsync --archive --compress "$WP_CORE_DIR/" "$DEPLOY_DIR/" || exit 1
