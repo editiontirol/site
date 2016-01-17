@@ -13,8 +13,8 @@ fi
 # Old Website and Theme
 
 cd "$SCRIPT_DIR"
-  git submodule update --force || exit 1
-  git submodule foreach "git checkout master; git pull" || exit 1
+  git submodule update --init --recursive
+  git submodule foreach "git checkout master; git fetch --all; git reset --hard origin/master" || exit 1
 cd - &>/dev/null
 
 # Site Content
