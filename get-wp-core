@@ -6,7 +6,7 @@ source "$SCRIPT_DIR/config" || exit 1
 
 CACHE=/tmp
 
-WP_VERSION='4.4.1'
+WP_VERSION='4.4.2'
 WP_LANGUAGES=(de_DE de_DE_formal)
 
 WP_VERSION_MAJOR_MINOR=${WP_VERSION%%.*}.$(minor=${WP_VERSION#*.} && echo ${minor%%.*})
@@ -48,7 +48,7 @@ for plugin in \
   redirection@2.4.3 \
   regenerate-thumbnails@2.2.6 \
   underconstruction@1.16 \
-  woocommerce@2.4.13 \
+  woocommerce@2.5.2 \
   wp-optimize@1.8.9.10
 do
   plugin_version="${plugin##*@}"
