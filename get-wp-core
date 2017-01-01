@@ -44,12 +44,12 @@ hash msgfmt || brew install gettext && brew link gettext --force || exit 1
 
 for plugin in \
   language-fallback@1.0.3 \
-  mailgun@1.4.1 \
-  redirection@2.4.3 \
+  mailgun@1.5.5 \
+  redirection@2.5 \
   regenerate-thumbnails@2.2.6 \
-  underconstruction@1.16 \
-  woocommerce@2.5.2 \
-  wp-optimize@1.8.9.10
+  underconstruction@1.17 \
+  woocommerce@2.6.11 \
+  wp-optimize@2.1.0
 do
   plugin_version="${plugin##*@}"
   plugin_version_major_minor="${plugin_version%%.*}.$(minor="${plugin_version#*.}" && echo "${minor%%.*}")"
