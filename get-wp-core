@@ -6,7 +6,7 @@ source "$SCRIPT_DIR/config" || exit 1
 
 CACHE=/tmp
 
-WP_VERSION='4.4.2'
+WP_VERSION='4.7'
 WP_LANGUAGES=(de_DE de_DE_formal)
 
 WP_VERSION_MAJOR_MINOR=${WP_VERSION%%.*}.$(minor=${WP_VERSION#*.} && echo ${minor%%.*})
