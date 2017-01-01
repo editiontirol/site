@@ -40,7 +40,10 @@ done
 
 # Plugins
 
-hash msgfmt || brew install gettext && brew link gettext --force || exit 1
+if ! hash msgfmt &>/dev/null; then
+  brew install gettext || exit 1
+  export PATH="$(brew --prefix)/opt/gettext/bin:$PATH"
+fi
 
 for plugin in \
   language-fallback@1.0.3 \
@@ -93,8 +96,6 @@ do
     --exclude '/license.txt' \
     --exclude '/readme.txt' || exit 1
 done
-
-brew unlink gettext
 
 
 rsync --delete-excluded --archive "$CACHE/wordpress/" "$WP_CORE_DIR" \
