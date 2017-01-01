@@ -9,5 +9,5 @@ REMOTE_DIR_UPLOADS="$REMOTE_DIR/uploads"
 LOCAL_DIR="$SCRIPT_DIR/www"
 LOCAL_DIR_UPLOADS="$SCRIPT_DIR/../data/uploads"
 
-WP_CORE_DIR="$SCRIPT_DIR/.cache/wordpress"
-DEPLOY_DIR="$SCRIPT_DIR/.cache/deploy"
+WP_CORE_DIR="$SCRIPT_DIR/cache/wordpress"
+DEPLOY_DIR="$SCRIPT_DIR/cache/deploy"
