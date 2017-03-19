@@ -6,10 +6,10 @@ source "$SCRIPT_DIR/config" || exit 1
 
 CACHE=/tmp
 
-WP_VERSION='4.7'
+WP_VERSION='4.7.3'
 WP_LANGUAGES=(de_DE de_DE_formal)
 
-WP_VERSION_MAJOR_MINOR=${WP_VERSION%%.*}.$(minor=${WP_VERSION#*.} && echo ${minor%%.*})
+WP_VERSION_MAJOR_MINOR=${WP_VERSION%%.*}.$(minor=${WP_VERSION#*.} && printf ${minor%%.*})
 
 download_and_check() {
   url="${1}"
@@ -47,12 +47,12 @@ fi
 
 for plugin in \
   language-fallback@1.0.3 \
-  mailgun@1.5.5 \
+  mailgun@1.5.8.2 \
   redirection@2.5 \
   regenerate-thumbnails@2.2.6 \
-  underconstruction@1.17 \
-  woocommerce@2.6.11 \
-  wp-optimize@2.1.0
+  underconstruction@1.18 \
+  woocommerce@2.6.14 \
+  wp-optimize@2.1.1
 do
   plugin_version="${plugin##*@}"
   plugin_version_major_minor="${plugin_version%%.*}.$(minor="${plugin_version#*.}" && echo "${minor%%.*}")"
