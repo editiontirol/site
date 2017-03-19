@@ -16,4 +16,4 @@ rsync --archive --compress --delete-after "$DEPLOY_DIR/" "$SSH_USER@$SSH_HOST:$R
   --exclude .DS_Store \
   --exclude .git
 
-ssh editiontirol@eleven2 "if [ -d $REMOTE_DIR/www/uploads -a ! -L $REMOTE_DIR/www/uploads ]; then rm -rf $REMOTE_DIR/www/uploads; fi; ln -sfn $REMOTE_DIR_UPLOADS $REMOTE_DIR/www/uploads"
+ssh editiontirol@eleven2 "if [ -d ~/$REMOTE_DIR/www/uploads -a ! -L ~/$REMOTE_DIR/www/uploads ]; then rm -rf ~/$REMOTE_DIR/www/uploads; fi; ln -sfn ~/$REMOTE_DIR_UPLOADS ~/$REMOTE_DIR/www/uploads"

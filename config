@@ -3,7 +3,7 @@
 SSH_USER=editiontirol
 SSH_HOST=eleven2
 
-REMOTE_DIR='~/edition.tirol'
+REMOTE_DIR='edition.tirol'
 REMOTE_DIR_UPLOADS="$REMOTE_DIR/uploads"
 
 LOCAL_DIR="$SCRIPT_DIR/www"
