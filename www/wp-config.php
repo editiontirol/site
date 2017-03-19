@@ -7,7 +7,7 @@
   define('DB_CHARSET', 'utf8');
   define('DB_COLLATE', '');
   if(!defined('DB_HOST')) {
-    define('DB_HOST', 'localhost');
+    define('DB_HOST', '127.0.0.1');
   }
   $table_prefix = 'et_';
 
