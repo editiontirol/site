@@ -26,3 +26,5 @@
 /www/wp-signup.php
 /www/wp-trackback.php
 /www/xmlrpc.php
+
+/wp-config-production.php
